@@ -1,0 +1,53 @@
+UserController
+
+jeśli zawołam endpoint/user/register podając obiekt JSON { login: "abc", password: "abc" } to otrzymam sukces,
+a następnie gdy zawołam endpoint /user/login podając obiekt JSON taki jak wyżej to otrzymam sukces
+
+jeśli zawołam endpoint/user/register podając obiekt JSON {login: "pola", password: brak} to otrzymam błąd rejestracji,
+
+jeśli zawołam endpoint/user/register podając obiekt JSON(login: brak, password: "000"} to otrzymam błąd rejestracji;
+
+jeśli zawołam endpoint/user/login podając obiekt JSON {login: "abc", password: "000"} to otrzymam błąd logowania,
+
+jeśli zawołam endopoint/user/login podając obiekt JSON {login: brak, pasword: "abc"} to otrzymam błąd logowania,
+
+TitlesController
+
+jeśli zawołam endpoint/titles/getTitles lista będzie pusta,
+
+jeśli zawołam endpoint/titles/createTitles podając obiekt JSON{title: abc, author: abc, year: 2020} to otrzymam sukces,
+następnie gdy zawołam endpoint/titles/getTitles utworzony obiekt wyżej pojawi się na liście,
+
+jeśli zawołam endpoint/titles/createTitles podając obiekt JSON{title: abc, author: abc, year: brak} to otrzymam błąd dodania,
+
+jeśli zawołam endpoint/titles/createTitles podając obiekt JSON{title: abc, author: brak, year: brak} to otrzymam błąd dodania,
+
+jeśli zawołam endpoint/titles/createTitles podając obiekt JSON{title: brak, author: abc, year: brak} to otrzymam błąd dodania,
+
+jeśli zawołam endpoint/titles/updateTitles podając obiekt JSON{title: abc, author: abc, year: 2021}
+
+jeśli zawołam endpoint/titles/deleteTitles podajać obiekt JSON{title: abc, author: abc, year: 2021} to otrzymam sukces,
+
+ItemController
+
+jeśli zawołam endpoint/items/getItems lista będzie pusta,
+
+jeśli zawołam endpoint/items/createItems podając obiekt JSON{purchase date: 2020-02-02} to otrzymam sukces
+
+jeśli zawołam endpoint/items/createItems podając obiekt JSON{purchase date: brak} to nie otrzymam obiektu,
+
+jeśli zawołam endpoint/items/updateItems podajac obiekt JSON{purchase date: 2020-02-04} to otrzymam sukces,
+
+jeśli zawołam endpoint/items/deleteItems podajac obiekt JSON{purchase date: 2020-02-04} to otrzymam sukces
+
+RentController
+
+jeśli zawołam endpoint/rents/getRents lista będzie pusta,
+
+jeśli zawołam enpoint/rents/createRents podając obiekt JSON{customer: abc, date:2020-08-25} to otrzymam sukces,
+
+jeśli zawołam endpoint/rents/createRents podając obiekt JSON{customer: brak, date:2020-08-25} to otrzymam błąd,
+
+jeśli zawołam enpoint/rents/updateRents podajac obiekt JSON{customer abc,rent date:2020-08-26} to otrzymam sukces,
+
+jeśli zawołam enpoint/rents/deleteRents podajac obiekt JSON{customer abc,rent date:2020-08-26} to otrzymam sukces,
